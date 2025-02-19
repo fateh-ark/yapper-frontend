@@ -9,6 +9,7 @@ const props = defineProps({
     type: Number,
     default: 250,
   },
+  isReply: Boolean,
 })
 
 const content = ref('')
@@ -23,11 +24,14 @@ const charCount = computed(() => {
     <div class="grow">
       <textarea
         id="content"
-        rows="3"
+        :rows="props.isReply ? 2 : 3"
         v-model="content"
-        placeholder="What do you want to Yap about?"
-        class="w-full text-xl outline-none resize-none field-sizing-content"
+        :placeholder="props.isReply ? 'Reply to this Yap' : 'What do you want to Yap about?'"
+        class="w-full text-xl outline-none resize-none field-sizing-content peer"
       ></textarea>
+      <p v-if="props.isReply" class="text-stone-500 invisible peer-focus:visible">
+        Replying to <span class="text-yellow-500">@Someone</span>
+      </p>
       <hr class="border-stone-700 my-3" />
       <div class="w-full flex flex-row gap-3 items-center">
         <p
@@ -52,7 +56,7 @@ const charCount = computed(() => {
           class="bg-white hover:bg-amber-100 cursor-pointer text-black rounded-full font-semibold px-4 py-1 flex flex-row gap-1 items-center"
         >
           <PhPaperPlaneRight weight="fill" />
-          Post
+          {{ props.isReply ? 'Reply' : 'Post' }}
         </button>
       </div>
     </div>

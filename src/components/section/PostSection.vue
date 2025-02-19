@@ -15,11 +15,20 @@ const props = defineProps({
   },
   pfpImage: String,
   textContent: String,
+  isClickable: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
 <template>
-  <div class="flex flex-row gap-3">
+  <component
+    :is="props.isClickable ? 'RouterLink' : 'div'"
+    to="/post/1"
+    class="flex flex-row gap-3"
+    :class="{ 'hover:bg-white/10': props.isClickable }"
+  >
     <ProfileButton class="shrink-0" />
     <div class="grow">
       <div class="flex flex-row gap-2 items-center mb-1">
@@ -45,5 +54,5 @@ const props = defineProps({
         <SocialButton :icon="PhShare" />
       </div>
     </div>
-  </div>
+  </component>
 </template>

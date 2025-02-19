@@ -82,7 +82,7 @@ const route = useRoute()
       Load 100 new posts
     </button>
     <div class="w-full divide-y divide-stone-700 border-b border-stone-700">
-      <PostSection v-for="index in 10" :key="index" class="w-full p-4" />
+      <PostSection v-for="index in 10" :key="index" class="w-full p-4" :isClickable="true" />
     </div>
     <p class="w-full p-4 text-center text-stone-500 italic">-- Nothing else to see here! --</p>
   </main>
