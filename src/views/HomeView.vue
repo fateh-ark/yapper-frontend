@@ -1,4 +1,5 @@
 <script setup>
+import SideNav from '../components/SideNav.vue'
 import NewPostSection from '../components/section/NewPostSection.vue'
 import PostSection from '../components/section/PostSection.vue'
 import { ref } from 'vue'
@@ -7,9 +8,10 @@ const isForYou = ref('true')
 </script>
 
 <template>
+  <SideNav />
   <main class="py-14 md:w-3xl sm-2xl w-full h-full min-h-screen border-x border-stone-700 mx-auto">
     <div
-      class="fixed h-14 md:w-3xl sm-2xl w-full top-0 left-1/2 -translate-x-1/2 border-x border-b border-stone-700 flex flex-row text-lg font-semibold bg-[#1e170a]/50 backdrop-blur-sm"
+      class="fixed h-14 md:w-3xl sm-2xl w-full top-0 left-1/2 -translate-x-1/2 border-x border-b border-stone-700 flex flex-row text-lg font-semibold bg-yapperbg/50 backdrop-blur-sm z-20"
     >
       <button
         class="grow px-2 pt-3 hover:bg-white/10 cursor-pointer"
