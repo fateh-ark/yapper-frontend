@@ -9,6 +9,7 @@ import {
 } from '@phosphor-icons/vue'
 import SideNav from '../components/SideNav.vue'
 import DefaultPFP from '../assets/default-pfp.png'
+import DefaultBanner from '../assets/default-banner.png'
 import PostSection from '../components/section/PostSection.vue'
 
 const route = useRoute()
@@ -38,7 +39,12 @@ const route = useRoute()
       </button>
     </div>
     <div class="w-full border-b border-stone-700">
-      <img src="" alt="Profile Banner" class="bg-amber-500 h-[250px] text-center" height="250px" />
+      <img
+        :src="DefaultBanner"
+        alt="Profile Banner"
+        class="bg-amber-500 h-[250px] w-full text-center object-cover block"
+        height="250px"
+      />
       <div class="p-4">
         <div class="relative w-full h-14">
           <img
