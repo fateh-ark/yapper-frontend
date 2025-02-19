@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
+import ProfileButton from '../button/ProfileButton.vue'
 import { PhPaperPlaneRight } from '@phosphor-icons/vue'
 import { CircleProgressBar } from 'circle-progress.vue'
 
@@ -18,7 +19,7 @@ const charCount = computed(() => {
 
 <template>
   <div class="flex flex-row gap-3">
-    <img src="" alt="pfp" class="w-[40px] h-[40px] bg-stone-500 rounded-full" />
+    <ProfileButton class="shrink-0" />
     <div class="grow">
       <textarea
         id="content"

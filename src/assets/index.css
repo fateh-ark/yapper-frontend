@@ -3,10 +3,12 @@
 
 @layer base {
   html {
-    @apply text-white;
+    @apply text-white bg-yapperbg overscroll-none;
   }
 }
 
 @theme {
   --default-font-family: 'Outfit', 'sans-serif';
+
+  --color-yapperbg: #1e170a;
 }
