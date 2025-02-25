@@ -15,6 +15,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@josempgon/vue-keycloak": "^3.1.0",
     "@phosphor-icons/vue": "^2.2.1",
     "@tailwindcss/postcss": "^4.0.6",
     "@tailwindcss/vite": "^4.0.6",

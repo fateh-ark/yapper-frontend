@@ -6,11 +6,11 @@
 > <br><small>(i.e., an X (Twitter), BlueSky, Threads clone)</small>
 
 <b>Frontend</b> |
-<a href="">Monitorer</a><br>
+<a href="">Observability Stack</a><br>
 <a href="">User Service</a> |
 <a href="">Post Service</a> |
-<a href="">Timeline Service</a><br>
-<a href="">Middlewares</a>
+<a href="">Feed Service</a><br>
+<a href="https://github.com/fateh-ark/yapper-middlewares">Middlewares</a>
 
 </div>
 

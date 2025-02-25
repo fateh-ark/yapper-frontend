@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { useKeycloak } from '@josempgon/vue-keycloak'
 import {
   PhDotsThreeOutline,
   PhHouse,
@@ -7,9 +8,12 @@ import {
   PhBell,
   PhUser,
   PhGear,
+  PhKey,
 } from '@phosphor-icons/vue'
 import ProfileButton from './button/ProfileButton.vue'
 import YapperSquareLogo from '../assets/yapper-s-logo.png'
+
+const { username, isAuthenticated, token } = useKeycloak()
 </script>
 
 <template>
@@ -39,6 +43,17 @@ import YapperSquareLogo from '../assets/yapper-s-logo.png'
         <p class="mx-4 text-xl group-hover:visible invisible">Settings</p>
       </RouterLink>
     </div>
+    <!-- TODO: Remove this temp login thingy later -->
+    <Button
+      class="py-2 px-3 hover:bg-white/10 rounded-full flex flex-row items-center border border-white/10 cursor-pointer"
+    >
+      <PhKey :size="32" />
+      <p class="mx-4 text-xl">Login Test</p>
+    </Button>
+    <p>isAuthenticated: {{ isAuthenticated ? 'true' : 'false' }}</p>
+    <p v-if="isAuthenticated">username: {{ username }}</p>
+    <p v-if="isAuthenticated">token: {{ token }}</p>
+    <!-- END TODO -->
     <button class="py-2 px-3 hover:bg-white/10 rounded-full flex flex-row items-center group">
       <ProfileButton />
       <div class="mx-2 group-hover:visible invisible">
