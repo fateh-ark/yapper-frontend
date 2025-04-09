@@ -7,7 +7,7 @@
 
 <b>Frontend</b> |
 <a href="">Observability Stack</a><br>
-<a href="">User Service</a> |
+<a href="https://github.com/fateh-ark/yapper-user-service">User Service</a> |
 <a href="">Post Service</a> |
 <a href="">Feed Service</a><br>
 <a href="https://github.com/fateh-ark/yapper-middlewares">Middlewares</a>
@@ -18,9 +18,11 @@
 
 # ![repo icon](media/repo-icon.png) Yapper Frontend
 
-[insert screenshot here]
+![Profile Page Screenshot](media/frontend-screenshot.jpg)
 
 This repository contains the source codes for the front-end of Yapper! system. Developed using VueJS. The front-end could be build and run locally for development or testing.
+
+![C2 Model Highlight](media/c2-model.png)
 
 #### Demo
 
